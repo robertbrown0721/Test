@@ -17,6 +17,8 @@ namespace MyFunctionsApp
             string databaseId = Environment.GetEnvironmentVariable("CosmosDbDatabaseId");
             string containerId = Enviroment.GetEnvironmentVariable("CosmosDbConatinerId");
 
+
+            // modify
             CosmosClientBuilder clientBuilder = new CosmosClientBuilder(CosmosClientBuilder(endpoint, key));
             CosmosClient client = ClientBuilder.WithConnectionModeDirect().Build();
             CosmosDbservice cosmosDbservice = new CosmosDbservice(client, databaseId, containerId);
